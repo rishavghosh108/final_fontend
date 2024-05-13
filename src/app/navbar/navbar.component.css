@@ -1,0 +1,73 @@
+.main{
+    width: 15%;
+    background-color: #f2f2f2;
+    height: 100vh;
+}
+.threebar{
+    margin: 7%;
+    width: 20%;
+    padding: 3%;
+    border-radius: 50%;
+}
+.threebar:hover{
+    cursor: pointer;
+    background-color: #ddd;
+}
+.compose{
+    display: flex;
+    justify-content: center;
+}
+.compose div{
+    display: flex;
+    align-items: center;
+    border: 1px solid gray;
+    width: 60%;
+    height: 7vh;
+    border-radius: 20px;
+}
+.compose div:hover{
+    cursor: pointer;
+}
+.compos{
+    width: 20%;
+}
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #f2f2f2;
+    padding: 10px 0;
+}
+
+.nav-item {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.nav-item:hover {
+    background-color: #ddd;
+}
+.inbox, .draft{
+    width: 10%;
+}
+.star, .sent, .bin{
+    width: 8%;
+}
+.spam{
+    width: 14%;
+}
+img{
+    margin-left: 10%;
+    margin-right: 7%;
+}
+.search{
+    margin: 0;
+    position: absolute;
+    right: 0px;
+    width: 85vw;
+    background-color: skyblue;
+}

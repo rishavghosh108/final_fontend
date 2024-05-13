@@ -1,0 +1,86 @@
+<div class="body">
+    <div class="main" *ngIf="type">
+        <div class="header">
+            <h1>Registration</h1>
+            <hr>
+        </div>
+
+        <form [formGroup]="Signupcheck" (ngSubmit)="ChangeTab()">
+            <div class="details">
+                <span class="pos1 pos"
+                    *ngIf="this.Signupcheck.get('name')?.invalid && this.Signupcheck.get('name')?.touched || name_error">please
+                    Enter your Name</span>
+                <p class="width">Enter your name: <input type="text" formControlName="name" placeholder="full name"
+                        [class.error]="Signupcheck.get('name')?.invalid && Signupcheck.get('name')?.touched || name_error"
+                        (focus)="NameError()">
+                </p>
+                <span class="pos2 pos"
+                    *ngIf="Signupcheck.get('dob')?.invalid && Signupcheck.get('dob')?.touched || dob_error">please Enter
+                    DOB</span>
+                <p>Enter your DOB: <input type="date" formControlName="dob" placeholder="date of birth"
+                        [class.error]="Signupcheck.get('dob')?.invalid && Signupcheck.get('dob')?.touched || dob_error"
+                        (focus)="DobError()">
+                </p>
+                <span class="pos3 pos"
+                    *ngIf="Signupcheck.get('gender')?.invalid && Signupcheck.get('gender')?.touched || gender_error">please
+                    Enter your Gender</span>
+                <p>Enter your Gender:
+                    <input type="radio" [value]="'male'" formControlName="gender" (click)="GenderError()">Male
+                    <input type="radio" [value]="'female'" formControlName="gender" (click)="GenderError()"> Female
+                </p>
+                <span class="pos4 pos"
+                    *ngIf="Signupcheck.get('mobile')?.invalid && Signupcheck.get('mobile')?.touched || mobile_error">please
+                    Enter your Mobile</span>
+                <span class="pos4 pos" *ngIf="mobile_check_error">mobile no already registered</span>
+                <p class="width">Enter your Mobile: <input type="number" formControlName="mobile" placeholder="mobile"
+                        [class.error]="Signupcheck.get('mobile')?.invalid && Signupcheck.get('mobile')?.touched || mobile_error"
+                        (focus)="MobileError()">
+                </p>
+            </div>
+            <div class="other">
+                <a routerLink="/login">Back to login</a>
+                <button type="submit">Next</button>
+            </div>
+        </form>
+    </div>
+
+
+
+    <div class="main" *ngIf="!type">
+        <div class="header">
+            <h1>Registration</h1>
+            <hr>
+        </div>
+
+        <form [formGroup]="Email" (ngSubmit)="Submit()">
+
+            <div class="details">
+                <span class="pos error1" *ngIf="email_check_error">email already in use</span>
+                <span class="pos error1"
+                    *ngIf="Email.get('email')?.invalid && Email.get('email')?.touched || email_error">please choose a
+                    email</span>
+                <p class="email">Pic a Email: <input type="text" placeholder="Enter your Email"
+                        [class.error]="Email.get('email')?.invalid && Email.get('email')?.touched || email_error"
+                        formControlName="email" (focus)="EmailError()">@rishav.com</p>
+                <span class="pos error2"
+                    *ngIf="Email.get('password')?.invalid && Email.get('password')?.touched || password_error">Please enter
+                    password</span>
+                <p class="password">Enter Password: <input type="password" placeholder="Enter Password"
+                        [class.error]="Email.get('password')?.invalid && Email.get('password')?.touched || password_error"
+                        formControlName="password" (focus)="PasswordError()"></p>
+                <span class="pos error3"
+                    *ngIf="Email.get('confirmpassword')?.touched && Email.get('confirmpassword')?.value !== Email.get('password')?.value || confirmpassword_error">Please
+                    comfirm password correctly</span>
+                <p class="cpassword">Confirm Password: <input type="password" placeholder="Re-Enter Password"
+                        [class.error]="Email.get('confirmpassword')?.touched && (Email.get('confirmpassword')?.value !== Email.get('password')?.value) || confirmpassword_error"
+                        formControlName="confirmpassword" (focus)="ConfirmPasswordError()"></p>
+            </div>
+
+            <div class="other">
+                <a (click)="ChangeType()">Back</a>
+                <button type="submit">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</div>

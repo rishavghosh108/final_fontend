@@ -1,0 +1,31 @@
+<div class="body">
+    <div class="main">
+        <h1 class="h1">Forget Password</h1>
+        <hr>
+        <form [formGroup]="Forget" (ngSubmit)="Submit()" class="inputs">
+            <span class="error email_error" *ngIf="exist_error"> please enter a valid email</span>
+            <span class="error email_error"
+                *ngIf="Forget.get('email')?.invalid && Forget.get('email')?.touched || email_error"> please enter a
+                valid email</span>
+            <p>Enter email&nbsp; <input type="email" formControlName="email"
+                    [class.buttom_color]="Forget.get('email')?.invalid && Forget.get('email')?.touched || email_error" (focus)="Email_error()" class="email">{{domain}}
+            </p>
+            <span class="error password_error"
+                *ngIf="Forget.get('password')?.invalid && Forget.get('password')?.touched || password_error">Enter
+                password</span>
+            <p>Forget Password &nbsp;&nbsp;&nbsp;&nbsp;<input type="password" formControlName="password"
+                    [class.buttom_color]="Forget.get('password')?.invalid && Forget.get('password')?.touched || password_error" (focus)="Password_error()" class="password">
+            </p>
+            <span class="error reenter_password"
+                *ngIf="Forget.get('confirmpassword')?.invalid && Forget.get('confirmpassword')?.touched || confirm_error">Re
+                Enter password</span>
+            <p>Confirm Password &nbsp;<input type="password" formControlName="confirmpassword"
+                    [class.buttom_color]="Forget.get('confirmpassword')?.invalid && Forget.get('confirmpassword')?.touched || confirm_error" (focus)="Confirm_error()" class="confirm">
+            </p>
+            <div class="forget"><button class="forget_button" type="submit">Forget</button></div>
+        </form>
+        <div class="other">
+            <a routerLink="/login">Back To Login</a>
+        </div>
+    </div>
+</div>

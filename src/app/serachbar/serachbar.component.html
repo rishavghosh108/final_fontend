@@ -1,0 +1,12 @@
+<div class="body">
+    <div class="main">
+        <input type="text" placeholder="Search.." class="search-bar">
+        <button type="submit" class="search-button">Search</button>
+        <div class="log">
+            <img src="../../assets/profileicon.png" alt="" class="logo" (click)="ChangeProfile()">
+        </div>
+    </div>
+</div>
+<div class="profile" *ngIf="profile">
+    <app-profile></app-profile>
+</div>

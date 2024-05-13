@@ -1,0 +1,74 @@
+.body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    height: 40vh;
+    width: 30vw;
+    background-color: #dddd;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10%;
+    position: relative;
+}
+.header{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+hr{
+    width: 20vw;
+}
+.about{
+    margin-top: 7%;
+    display: flex;
+    justify-content: center;
+}
+.about p{
+    font-size: 17px;
+}
+.otp{
+    margin-top: 11%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+input{
+    height: 45px;
+    width: 45px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.button{
+    margin-top: 8%;
+    display: flex;
+    justify-content: center;
+}
+.button button{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 17px;
+    padding: 3px;
+    background-color: skyblue;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.span{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.error{
+    margin-top: 34%;
+    color: red;
+    font-size: 19px;
+}

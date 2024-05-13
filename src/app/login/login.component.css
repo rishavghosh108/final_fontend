@@ -1,0 +1,103 @@
+.body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    height: 40vh;
+    width: 30vw;
+    background-color: #dddd;
+    border-radius: 10%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.profile{
+    width: 30%;
+}
+.login{
+    display: flex;
+    justify-content: center;
+}
+.login button{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 17px;
+    font-family: bold;
+    border-radius: 16px;
+    text-align: center;
+    cursor: pointer;
+    bottom: 4%;
+    background-color: skyblue;
+}
+.other{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3%;
+}
+.forget a{
+    text-decoration: none;
+    color: black;
+}
+
+.forget a:hover {
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+.register a{
+    text-decoration: none;
+    color: black;
+}
+.register a:hover {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.email, .password{
+    padding: 1%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 17px;
+    width: 40%;
+}
+.email{
+    text-align: right;
+}
+p{
+    display: flex;
+    flex-direction: row;
+    font-size: 17px;
+    margin-left: 5%;
+}
+.error{
+    color: red;
+    font-size: 17px;
+    position: absolute;
+}
+.bordererrorcolor{
+    border-bottom: 1px solid red;
+}
+.emailerr{
+    left: 35%;
+    top: 42%;
+}
+.passworderr{
+    left: 35%;
+    top: 58%;
+}
+input:focus{
+    outline: none;
+    border-bottom: 2px solid skyblue;
+}
+.template{
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

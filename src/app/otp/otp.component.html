@@ -1,0 +1,21 @@
+<div class="body">
+    <div class="main">
+        <div class="header">
+            <h1>OTP VERIFY</h1>
+            <hr>
+        </div>
+        <div class="about">
+            <p>otp has been sent to your mobile no</p>
+        </div>
+        <div class="span" *ngIf="error"><span class="error">please enter a valid otp</span></div>
+        <div class="otp">
+            <input type="number" id="input1" (input)="onInput($event, input2)" #input1>
+            <input type="number" id="input2" (input)="onInput($event, input3)" disabled #input2>
+            <input type="number" id="input3" (input)="onInput($event, input4)" disabled #input3>
+            <input type="number" id="input4" (input)="onInput($event, null)" disabled #input4>
+        </div>
+        <div class="button">
+            <button (click)="Submit()">Verify</button>
+        </div>
+    </div>
+</div>

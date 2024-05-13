@@ -1,0 +1,108 @@
+.body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    height: 40vh;
+    width: 30vw;
+    background-color: hsla(0, 0%, 87%, 0.867);
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.h1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+}
+hr{
+    width: 70%;
+}
+.inputs{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+    position: relative;
+    margin-left: 5%;
+}
+p{
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+input{
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+    padding: 1%;
+    width: 60%;
+}
+.forget{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.forget_button{
+    width: 25%;
+    font-size: 17px;
+    font-family: bold;
+    border-radius: 20px;
+    background-color: skyblue;
+}
+.forget_button:hover{
+    cursor: pointer;
+}
+.other{
+    width: 100%;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+.other a{
+    text-decoration: none;
+    color: black;
+}
+.other a:hover{
+    text-decoration: underline;
+    color: blue;
+}
+.error{
+    font-size: 17px;
+    color: red;
+    position: absolute;
+}
+.email_error{
+    top: -5%;
+    left: 25%;
+}
+.password_error{
+    top: 19%;
+    left: 38%;
+}
+.reenter_password{
+    top: 45%;
+    left: 38%;
+}
+.buttom_color{
+    border-bottom: 1px solid red;
+}
+input:focus{
+    outline: none;
+    border-bottom: 2px solid skyblue;
+}
+.email{
+    width: 45%;
+}
+.password{
+    width: 50%;
+}
+.confirm{
+    width: 50%;
+}

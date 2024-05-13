@@ -1,0 +1,123 @@
+.body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    height: 40vh;
+    width: 30vw;
+    background-color: #dddd;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10%;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+hr{
+    width: 20vw;
+}
+p{
+    font-size: 20px;
+}
+input{
+    font-size: 20px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+input:focus{
+    border-bottom:3px solid skyblue;
+}
+.details{
+    height: 27vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 2vw;
+    position: relative;
+}
+.other{
+    margin-top: 1vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.other a{
+    text-decoration: none;
+    color: black;
+}
+.other a:hover{
+    text-decoration: underline;
+    color: blue;
+}
+.other button{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    cursor: pointer;
+    font-size: 17px;
+    padding: 3px;
+    background-color: aqua;
+    border-radius: 8px;
+}
+.pos{
+    color: red;
+    position: absolute;
+    top: 5%;
+}
+.pos1{
+    left: 35%;
+}
+.pos2{
+    top: 28%;
+    left: 35%;
+}
+.pos3{
+    top: 50%;
+    left: 38%;
+}
+.pos4{
+    top: 72%;
+    left: 38%;
+}
+.pos40{
+    top: 66%;
+    left: 38%;
+}
+.error{
+    border-bottom: 1px solid red;
+}
+.email input{
+    width: 40%;
+    text-align: right;
+}
+.error1{
+    top: 10%;
+    left: 25%;
+}
+.error2{
+    top: 37%;
+    left: 33%;
+}
+.error3{
+    top: 65%;
+    left: 39%;
+}
+.password input{
+    width: 15vw;
+}
+.cpassword input{
+    width: 15vw;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.width input{
+    width: 50%;
+}

@@ -1,0 +1,40 @@
+.main{
+    height: 40vh;
+    width: 30vw;
+    background-color: #dddd;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.name{
+    font-size: 30px;
+    font-style: bold;
+    margin-top: 10px;
+}
+.email{
+    font-size: 20px;
+    margin-top: 3%;
+}
+.logout{
+    margin-top: 5%;
+}
+.logout button{
+    background: none;
+    font-size: 17px;
+    padding: 10%;
+    padding-left: 20%;
+    padding-right: 20%;
+    border-radius: 15%;
+}
+.logout button:hover{
+    cursor: pointer;
+}
+.profilepic{
+    width: 30%;
+}
+.profile{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
