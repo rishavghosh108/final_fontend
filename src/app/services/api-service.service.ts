@@ -13,7 +13,7 @@ export class ApiServiceService {
 
   otptoken: string = ''
 
-  private url: String = "http://localhost:7755"
+  private url: String = "https://final-backend-ky0r.onrender.com"
 
   private checkmobileurl = this.url + "/system/mobile";
   private checkemailurl = this.url + "/system/email";
