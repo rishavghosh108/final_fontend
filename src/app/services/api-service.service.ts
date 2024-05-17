@@ -29,8 +29,8 @@ export class ApiServiceService {
     this._compose.next(value);
   }
 
-  // private url: String = "https://final-backend-ky0r.onrender.com"
-  private url: string = "http://192.168.1.101:7755";
+  private url: String = "https://final-backend-ky0r.onrender.com"
+  // private url: string = "http://192.168.1.101:7755";
   
   private checkmobileurl = this.url + "/system/mobile";
   private checkemailurl = this.url + "/system/email";
