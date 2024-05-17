@@ -12,8 +12,8 @@ export class InboxComponent{
 
   intervalId: any;
 
-  mails:any[]=[{"subject":"hello rishav","sender":"sender","recipient":"recipient","body":"body","created_at":"djdjdjdjdj"}];
-  mail_count:number=1;
+  mails:any;
+  mail_count:number=0;
 
   constructor(private api: ApiServiceService) {}
 
@@ -26,16 +26,16 @@ export class InboxComponent{
     )
    }
 
-  // ngOnInit(): void {
+  ngOnInit(): void {
 
-  //   this.api.sidebar.subscribe(value => {
-  //     this.width = value;
-  //   });
+    this.api.sidebar.subscribe(value => {
+      this.width = value;
+    });
 
-  //   this.FetchMails();
-  //   this.intervalId = setInterval(() => {
-  //     this.FetchMails();
-  //   }, 300000); // 300000 ms = 5 minutes
-  // }
+    this.FetchMails();
+    this.intervalId = setInterval(() => {
+      this.FetchMails();
+    }, 300000); // 300000 ms = 5 minutes
+  }
 
 }

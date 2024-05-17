@@ -29,8 +29,8 @@ export class ApiServiceService {
     this._compose.next(value);
   }
 
-  private url: String = "https://final-backend-ky0r.onrender.com"
-  // private url: string = "http://192.168.1.101:7755";
+  // private url: String = "https://final-backend-ky0r.onrender.com"
+  private url: string = "http://192.168.1.101:7755";
   
   private checkmobileurl = this.url + "/system/mobile";
   private checkemailurl = this.url + "/system/email";
@@ -41,6 +41,7 @@ export class ApiServiceService {
   private forgeturl=this.url+ "/system/forget"
 
   private inboxurl=this.url+ "/inbox"
+  private spamurl=this.url+ "/spam"
 
   constructor(private http: HttpClient, private auth: AuthorizationService) { }
 
@@ -74,5 +75,9 @@ export class ApiServiceService {
 
   Inbox(headers = new HttpHeaders({"auth": this.auth.GetToken()})):Observable<any>{
     return this.http.get<any>(this.inboxurl, { headers, observe: 'response'})
+  }
+
+  Spam(headers = new HttpHeaders({"auth": this.auth.GetToken()})):Observable<any>{
+    return this.http.get<any>(this.spamurl, { headers, observe: 'response'})
   }
 }
