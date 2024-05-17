@@ -18,6 +18,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { InboxComponent } from './inbox/inbox.component';
 import { AuthorizationService } from './services/authorization.service';
 import { CookieService } from 'ngx-cookie-service';
+import { StarredComponent } from './starred/starred.component';
+import { SentComponent } from './sent/sent.component';
+import { DraftComponent } from './draft/draft.component';
+import { SpamComponent } from './spam/spam.component';
+import { TrashComponent } from './trash/trash.component';
+import { ComposeComponent } from './compose/compose.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +35,13 @@ import { CookieService } from 'ngx-cookie-service';
     ForgetComponent,
     SignupComponent,
     OtpComponent,
-    InboxComponent
+    InboxComponent,
+    StarredComponent,
+    SentComponent,
+    DraftComponent,
+    SpamComponent,
+    TrashComponent,
+    ComposeComponent
   ],
   imports: [
     BrowserModule,

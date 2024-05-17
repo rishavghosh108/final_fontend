@@ -1,0 +1,80 @@
+.body{
+    position: relative;
+    z-index: 10;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 5%;
+
+}
+.main{
+    height: 80vh;
+    width: 80vw;
+    border-radius: 10px;
+    box-shadow: -1px -1px 15px 7px #888888;
+    background-color: white;
+}
+.header{
+    width: 100%;
+}
+.header p{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ddd;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.cross{
+    width: 5%;
+    cursor: pointer;
+    padding: .5%;
+}
+input{
+    background: none;
+    border: none;
+    outline: none;
+    width: 95%;
+    border-bottom: 1px solid black;
+}
+p{
+    font-size: 20px;
+}
+p input{
+    font-size: 17px;
+}
+.reciver{
+    padding-top: 1%;
+}
+.subject input{
+    padding-top: 1%;
+    font-size: 17px;
+    margin-left: 2%;
+    padding-bottom: .5%;
+}
+.email_body textarea{
+    border: none;
+    width: 76.7vw;
+    height: 53vh;
+    outline: none;
+    background: none;
+    padding: 2%;
+    font-size: 15px;
+}
+.button{
+    height: 6.6vh;
+    display: flex;
+    align-items: center;
+}
+button{
+    width: 5vw;
+    font-size: 17px;
+    padding: .4%;
+    background-color: rgb(18, 124, 166);
+    border-radius: 18px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: 3%;
+}

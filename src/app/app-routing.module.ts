@@ -7,6 +7,11 @@ import { OtpComponent } from './otp/otp.component';
 import { AuthOtpPageService } from './services/auth-otp-page.service';
 import { InboxComponent } from './inbox/inbox.component';
 import { AuthenticateService } from './services/authenticate.service';
+import { StarredComponent } from './starred/starred.component';
+import { SentComponent } from './sent/sent.component';
+import { DraftComponent } from './draft/draft.component';
+import { SpamComponent } from './spam/spam.component';
+import { TrashComponent } from './trash/trash.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/inbox', pathMatch: 'full'},
@@ -15,6 +20,11 @@ const routes: Routes = [
   {path:'signup', component: SignupComponent},
   {path:'otp', component: OtpComponent, canActivate: [AuthOtpPageService]},
   {path: 'inbox', component: InboxComponent, canActivate: [AuthenticateService]},
+  {path: 'starred', component: StarredComponent, canActivate: [AuthenticateService]},
+  {path: 'sent', component: SentComponent, canActivate: [AuthenticateService]},
+  {path: 'draft', component: DraftComponent, canActivate: [AuthenticateService]},
+  {path: 'spam', component: SpamComponent, canActivate: [AuthenticateService]},
+  {path: 'trash', component: TrashComponent, canActivate: [AuthenticateService]},
 ];
 
 @NgModule({

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http'
-import { Observable } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http'
+import { BehaviorSubject, Observable } from 'rxjs';
 import { AuthorizationService } from './authorization.service';
 
 @Injectable({
@@ -13,8 +13,25 @@ export class ApiServiceService {
 
   otptoken: string = ''
 
-  private url: String = "https://final-backend-ky0r.onrender.com"
+  compose:boolean=false;
 
+  private _sidebar = new BehaviorSubject<boolean>(true);
+  sidebar = this._sidebar.asObservable();
+
+  setSidebar(value: boolean) {
+    this._sidebar.next(value);
+  }
+
+  private _compose = new BehaviorSubject<boolean>(false);
+  composemail = this._compose.asObservable();
+
+  composePanel(value: boolean) {
+    this._compose.next(value);
+  }
+
+  // private url: String = "https://final-backend-ky0r.onrender.com"
+  private url: string = "http://192.168.1.101:7755";
+  
   private checkmobileurl = this.url + "/system/mobile";
   private checkemailurl = this.url + "/system/email";
   private signupurl = this.url + "/system/signup";
@@ -22,6 +39,8 @@ export class ApiServiceService {
   private loginurl = this.url + "/system/login"
   private profileurl = this.url + "/system/profile"
   private forgeturl=this.url+ "/system/forget"
+
+  private inboxurl=this.url+ "/inbox"
 
   constructor(private http: HttpClient, private auth: AuthorizationService) { }
 
@@ -51,5 +70,9 @@ export class ApiServiceService {
 
   Forget(body: any): Observable<any> {
     return this.http.post<any>(this.forgeturl, body, { observe: 'response' })
+  }
+
+  Inbox(headers = new HttpHeaders({"auth": this.auth.GetToken()})):Observable<any>{
+    return this.http.get<any>(this.inboxurl, { headers, observe: 'response'})
   }
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiServiceService } from './services/api-service.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'final';
+
+  composeDisplay:boolean=false;
+  
+  constructor(private api:ApiServiceService){
+    this.api.composemail.subscribe(value => {
+      this.composeDisplay = value;
+    });
+  }
+
 }
