@@ -38,7 +38,7 @@ export class ForgetComponent {
     this.confirm_error=false;
   }
 
-  domain="@rishav.com"
+  domain="@bengalintituteoftechnology.online"
 
   Submit(){
     if(this.Forget.valid){

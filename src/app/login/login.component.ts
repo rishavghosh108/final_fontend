@@ -28,7 +28,7 @@ export class LoginComponent {
     this.password_error=false;
   }
 
-  domain="@rishav.com"
+  domain="@bengalintituteoftechnology.online"
 
   Submit(){
     if(this.Login.valid){

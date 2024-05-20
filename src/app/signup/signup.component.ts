@@ -89,7 +89,7 @@ export class SignupComponent {
 
   Submit() {
     if (this.Email.valid && this.Email.get('password')?.value===this.Email.get('confirmpassword')?.value) {
-      const email = this.Email.get('email')?.value + '@rishav.com';
+      const email = this.Email.get('email')?.value + '@bengalintituteoftechnology.online';
       this.api.Email({ "email": email }).subscribe(
         response => {
           if (response.body.data['successful'] === 'false' ? true : false) {
