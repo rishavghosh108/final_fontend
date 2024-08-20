@@ -1,74 +1,110 @@
-.body{
+.body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #f7f8fc;
 }
-.main{
-    height: 40vh;
+
+.main {
+    height: 50vh;
     width: 30vw;
-    background-color: #dddd;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    border-radius: 10%;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     position: relative;
+    padding: 20px;
 }
-.header{
-    margin-top: 10%;
+
+.header {
+    margin-top: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-hr{
-    width: 20vw;
+
+hr {
+    width: 50%;
+    border: none;
+    border-top: 2px solid #007bff;
+    margin: 10px 0;
 }
-.about{
-    margin-top: 7%;
+
+.about {
+    margin-top: 5%;
     display: flex;
     justify-content: center;
 }
-.about p{
-    font-size: 17px;
+
+.about p {
+    font-size: 18px;
+    color: #333;
 }
-.otp{
-    margin-top: 11%;
+
+.otp {
+    margin-top: 10%;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
-input{
-    height: 45px;
-    width: 45px;
-    border-radius: 10px;
-    font-size: 20px;
+
+input {
+    height: 55px;
+    width: 55px;
+    border-radius: 12px;
+    font-size: 22px;
     text-align: center;
+    border: 2px solid #ddd;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f4f4f4;
 }
+
+input:focus {
+    border: 2px solid #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-.button{
+
+.button {
     margin-top: 8%;
     display: flex;
     justify-content: center;
 }
-.button button{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 17px;
-    padding: 3px;
-    background-color: skyblue;
-    border-radius: 7px;
+
+.button button {
+    font-family: 'Arial Narrow Bold', sans-serif;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
-.span{
+
+.button button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.span {
     position: absolute;
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.error{
-    margin-top: 34%;
+
+.error {
+    margin-top: 30%;
     color: red;
-    font-size: 19px;
+    font-size: 20px;
 }
