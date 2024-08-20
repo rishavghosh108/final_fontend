@@ -1,4 +1,4 @@
-.body{
+.body {
     position: relative;
     z-index: 10;
     height: 100vh;
@@ -6,75 +6,128 @@
     align-items: center;
     justify-content: flex-end;
     margin-right: 5%;
+}
 
-}
-.main{
-    height: 80vh;
+.main {
+    height: 83vh;
     width: 80vw;
-    border-radius: 10px;
-    box-shadow: -1px -1px 15px 7px #888888;
-    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Position relative to position the cross */
 }
-.header{
+
+.main:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.header {
     width: 100%;
-}
-.header p{
+    background-color: hsl(189, 43%, 45%);
+    color: white;
+    padding: 10px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ddd;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
-.cross{
-    width: 5%;
-    cursor: pointer;
-    padding: .5%;
-}
-input{
-    background: none;
-    border: none;
-    outline: none;
-    width: 95%;
-    border-bottom: 1px solid black;
-}
-p{
+
+.header p {
     font-size: 20px;
+    margin: 0;
+    font-weight: bold;
+    position: relative;
 }
-p input{
-    font-size: 17px;
+
+.cross {
+    width: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    position: absolute;
+    top: 10px;  /* Top-right corner */
+    right: 10px;  /* Top-right corner */
 }
-.reciver{
-    padding-top: 1%;
+
+.cross:hover {
+    transform: rotate(90deg);
 }
-.subject input{
-    padding-top: 1%;
-    font-size: 17px;
-    margin-left: 2%;
-    padding-bottom: .5%;
+
+.reciver, .subject {
+    padding: 10px 20px;
+    font-size: 18px;
 }
-.email_body textarea{
-    border: none;
-    width: 76.7vw;
-    height: 53vh;
-    outline: none;
-    background: none;
-    padding: 2%;
-    font-size: 15px;
-}
-.button{
-    height: 6.6vh;
+
+.reciver p, .subject p {
+    margin: 0;
     display: flex;
     align-items: center;
 }
-button{
-    width: 5vw;
-    font-size: 17px;
-    padding: .4%;
-    background-color: rgb(18, 124, 166);
-    border-radius: 18px;
+
+.reciver input, .subject input {
+    background: none;
     border: none;
-    color: white;
+    outline: none;
+    width: 100%;
+    border-bottom: 2px solid #3f51b5;
+    font-size: 18px;
+    padding: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.reciver input:focus, .subject input:focus {
+    border-bottom: 2px solid #18a0fb;
+}
+
+.email_body {
+    flex-grow: 1;
+    padding: 15px 20px;
+}
+
+.email_body textarea {
+    width: 97%;
+    height: 40%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 16px;
+    outline: none;
+    resize: vertical;
+    background-color: #f9f9f9;
+    box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.05);
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.email_body textarea:focus {
+    border: 1px solid #18a0fb;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+.button {
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px 20px 20px;
+}
+
+.button button {
+    width: 150px;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #3f51b5;
+    border-radius: 30px;
+    border: none;
+    color: white; /* Set to white for visibility */
     cursor: pointer;
-    margin-left: 3%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button button:hover {
+    background-color: #18a0fb;
+    transform: scale(1.05);
 }

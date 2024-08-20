@@ -1,7 +1,8 @@
 <div class="body">
     <div class="main">
         <div class="header">
-            <p>&nbsp; New Message<img src="../../assets/cross.png" alt="quit" class="cross" (click)="Hide()"></p>
+            <div>&nbsp; New Message</div>
+            <div><img src="../../assets/cross.png" alt="quit" class="cross" (click)="Hide()"></div>
         </div>
         <div class="reciver">
             <p>&nbsp; To &nbsp;<input type="email" placeholder="reciver email"></p>
@@ -11,9 +12,10 @@
         </div>
         <div class="email_body">
             <textarea id="emailTextarea" name="emailTextarea" rows="46" cols="162" maxlength="1000" placeholder="Type your email here..." style="resize: vertical;"></textarea>
+            <div class="button">
+                <button type="submit">Submit</button>
+            </div>
         </div>
-        <div class="button">
-            <button type="submit">Submit</button>
-        </div>
+        
     </div>
 </div>
