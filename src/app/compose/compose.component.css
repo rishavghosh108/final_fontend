@@ -28,7 +28,7 @@
 
 .header {
     width: 100%;
-    background-color: hsl(189, 43%, 45%);
+    background: linear-gradient(135deg, #4a90e2, #8e44ad);
     color: white;
     padding: 10px 15px;
     display: flex;
