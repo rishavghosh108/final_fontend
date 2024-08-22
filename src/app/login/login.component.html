@@ -6,41 +6,39 @@
         <div class="template">
           <div class="form-group">
             <label for="email">UserName:</label>
+            <span id="emailError" class="error emailerr" *ngIf="(Login.get('email')?.invalid && Login.get('email')?.touched) || email_error">
+              Please enter a valid email
+            </span>
             <input
               id="email"
               type="email"
               placeholder="Enter Your Email"
               class="email"
               formControlName="email"
-              [class.bordererrorcolor]="(Login.get('email')?.invalid && Login.get('email')?.touched) || email_error"
+              [ngClass]="{ 'bordererrorcolor': (Login.get('email')?.invalid && Login.get('email')?.touched) || email_error }"
               (focus)="Email_err()"
               aria-describedby="emailError"
             />
-            <span
-              id="emailError"
-              class="error emailerr"
-              *ngIf="(Login.get('email')?.invalid && Login.get('email')?.touched) || email_error"
-            >Please enter a valid email</span>
           </div>
+          <br />
   
           <div class="form-group">
             <label for="password">Password:</label>
+            <span id="passwordError" class="error passworderr" *ngIf="(Login.get('password')?.invalid && Login.get('password')?.touched) || password_error">
+              Please enter a valid password
+            </span>
             <input
               id="password"
               type="password"
               placeholder="Enter Your Password"
               class="password"
               formControlName="password"
-              [class.bordererrorcolor]="(Login.get('password')?.invalid && Login.get('password')?.touched) || password_error"
+              [ngClass]="{ 'bordererrorcolor': (Login.get('password')?.invalid && Login.get('password')?.touched) || password_error }"
               (focus)="Password_err()"
               aria-describedby="passwordError"
             />
-            <span
-              id="passwordError"
-              class="error passworderr"
-              *ngIf="(Login.get('password')?.invalid && Login.get('password')?.touched) || password_error"
-            >Please enter a valid password</span>
           </div>
+          <br />
   
           <div class="login">
             <button type="submit">Login</button>
