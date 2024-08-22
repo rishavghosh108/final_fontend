@@ -7,15 +7,11 @@
 
     <form [formGroup]="Signupcheck" (ngSubmit)="ChangeTab()">
       <div class="details">
+        <div class="form_input">
           <label for="name">Enter your name:</label>
 
           <div class="span">
-            <span class="name_error"
-              *ngIf="
-                (Signupcheck.get('name')?.invalid &&
-                  Signupcheck.get('name')?.touched) ||
-              name_error"
-            >
+            <span class="name_error" *ngIf=" (Signupcheck.get('name')?.invalid && Signupcheck.get('name')?.touched) || name_error" >
               Please enter your name
             </span>
           </div>
@@ -29,8 +25,10 @@
             "
             (focus)="NameError()"
           />
+        </div>
 
-          <br><br>
+        <br><br>
+        <div class="form_input">
           <label for="dob">Enter your DOB:</label>
           <div class="span">
             <span class="dob_error"
@@ -54,42 +52,31 @@
               "
               (focus)="DobError()"
             />
+        </div>
           <br><br>
+        <div class="form_input">
           <div class="gender">
             <p>Enter your Gender:</p>
-            <div class="span1">
-              <span
-                class="gender_error"
-                *ngIf="
-                  (Signupcheck.get('gender')?.invalid &&
-                    Signupcheck.get('gender')?.touched) ||
-                  gender_error
-                "
-              >
-                Please select your gender
-              </span></div>
+
             <div class="gen">
-            <label for=""></label>
-            <label>
-              <input
-                type="radio"
-                [value]="'male'"
-                formControlName="gender"
-                (click)="GenderError()"
-              />
-              Male
-            </label>
-            <label>
-            <input
-              type="radio"
-              [value]="'female'"
-              formControlName="gender"
-              (click)="GenderError()"
-            />
-            Female
-            </label>
+              <label>
+                <input type="radio" [value]="'male'" formControlName="gender" (click)="GenderError()"/>Male
+              </label>
+              <label>
+                <input type="radio" [value]="'female'" formControlName="gender" (click)="GenderError()"/>Female
+              </label>
             </div>
+
+            <div class="span">
+              <span class="gender_error" *ngIf=" (Signupcheck.get('gender')?.invalid && Signupcheck.get('gender')?.touched) || gender_error">
+                Please select your gender
+              </span>
+            </div>
+
           </div>
+        </div>
+
+        <div class="form_input">
           <label for="mobile">Enter your Mobile:</label>
           <div class="span">
           <div class="mobile_error">
@@ -119,7 +106,7 @@
             Mobile number already registered
           </span>
       </div>
-
+    </div>
       <div class="other">
         <a routerLink="/login">Back to Login</a>
         <button type="submit">Next</button>
@@ -135,22 +122,17 @@
 
     <form [formGroup]="Email" (ngSubmit)="Submit()">
       <div class="details">
+        <div class="form_input">
           <label for="email">Pick an Email:</label>
           <div class="span">
             <span class="error-message" *ngIf="email_check_error">
               Email already in use
             </span>
-            <span
-              class="error-message"
-              *ngIf="
-                (Email.get('email')?.invalid && Email.get('email')?.touched) ||
-                email_error
-              "
-            >
+            <span class="error-message" *ngIf="(Email.get('email')?.invalid && Email.get('email')?.touched) || email_error">
               Please choose an email
-            </span></div>
-          <input
-            id="email"
+            </span>
+          </div>
+          <input id="email"
             type="text"
             formControlName="email"
             placeholder="Enter your Email"
@@ -160,8 +142,10 @@
             "
             (focus)="EmailError()"
           />@bengalintituteoftechnology.online
+          </div>
           <br><br>
 
+          <div class="form_input">
           <label for="password">Enter Password:</label>
           <div class="span">
             <span
@@ -187,8 +171,10 @@
             "
             (focus)="PasswordError()"
           />
+        </div>
           <br><br>
 
+          <div class="form_input">
           <label for="confirmpassword">Confirm Password:</label>
           <div class="span">
             <span
@@ -216,6 +202,7 @@
             "
             (focus)="ConfirmPasswordError()"
           />
+          </div>
       </div>
 
       <div class="other">
