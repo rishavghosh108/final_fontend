@@ -4,54 +4,54 @@
         <img src="../../assets/profileicon.png" alt="Profile Icon" class="profile" />
   
         <div class="template">
-          <div class="form-group">
-            <label for="email">UserName:</label>
-            <span id="emailError" class="error emailerr" *ngIf="(Login.get('email')?.invalid && Login.get('email')?.touched) || email_error">
-              Please enter a valid email
-            </span>
-            <input
-              id="email"
-              type="email"
-              placeholder="Enter Your Email"
-              class="email"
-              formControlName="email"
-              [ngClass]="{ 'bordererrorcolor': (Login.get('email')?.invalid && Login.get('email')?.touched) || email_error }"
-              (focus)="Email_err()"
-              aria-describedby="emailError"
-            />
-          </div>
-          <br />
+            <div class="form-group">
+                <label for="email">UserName:</label>
+                <span id="emailError" class="error emailerr" *ngIf="(Login.get('email')?.invalid && Login.get('email')?.touched) || email_error">
+                Please enter a valid email
+                </span>
+                <input
+                id="email"
+                type="email"
+                placeholder="Enter Your Email"
+                class="email"
+                formControlName="email"
+                [ngClass]="{ 'bordererrorcolor': (Login.get('email')?.invalid && Login.get('email')?.touched) || email_error }"
+                (focus)="Email_err()"
+                aria-describedby="emailError"
+                />
+            </div>
+            <br/>
   
-          <div class="form-group">
-            <label for="password">Password:</label>
-            <span id="passwordError" class="error passworderr" *ngIf="(Login.get('password')?.invalid && Login.get('password')?.touched) || password_error">
-              Please enter a valid password
-            </span>
-            <input
-              id="password"
-              type="password"
-              placeholder="Enter Your Password"
-              class="password"
-              formControlName="password"
-              [ngClass]="{ 'bordererrorcolor': (Login.get('password')?.invalid && Login.get('password')?.touched) || password_error }"
-              (focus)="Password_err()"
-              aria-describedby="passwordError"
-            />
-          </div>
-          <br />
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <span id="passwordError" class="error passworderr" *ngIf="(Login.get('password')?.invalid && Login.get('password')?.touched) || password_error">
+                Please enter a valid password
+                </span>
+                <input
+                id="password"
+                type="password"
+                placeholder="Enter Your Password"
+                class="password"
+                formControlName="password"
+                [ngClass]="{ 'bordererrorcolor': (Login.get('password')?.invalid && Login.get('password')?.touched) || password_error }"
+                (focus)="Password_err()"
+                aria-describedby="passwordError"
+                />
+            </div>
+            <br/>
   
-          <div class="login">
-            <button type="submit">Login</button>
-          </div>
+            <div class="login">
+                <button type="submit">Login</button>
+            </div>
         </div>
   
         <div class="other">
-          <div class="forget">
-            <a routerLink="/forget">Forgot Password?</a>
-          </div>
-          <div class="register">
-            <a routerLink="/signup">Not a User? Register Here</a>
-          </div>
+            <div class="forget">
+                <a routerLink="/forget">Forgot Password?</a>
+            </div>
+            <div class="register">
+                <a routerLink="/signup">Not a User? Register Here</a>
+            </div>
         </div>
       </div>
     </form>
