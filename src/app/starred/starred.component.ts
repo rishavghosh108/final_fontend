@@ -6,16 +6,6 @@ import { ApiServiceService } from '../services/api-service.service';
   templateUrl: './starred.component.html',
   styleUrls: ['./starred.component.css']
 })
-export class StarredComponent implements OnInit{
-
-  width: boolean = false;
-
-  constructor(private api: ApiServiceService) { }
-
-  ngOnInit(): void {
-    this.api.sidebar.subscribe(value => {
-      this.width = value;
-    });
-  }
-
+export class StarredComponent{
+  message: string = "starred";
 }

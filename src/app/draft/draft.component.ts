@@ -6,17 +6,7 @@ import { ApiServiceService } from '../services/api-service.service';
   templateUrl: './draft.component.html',
   styleUrls: ['./draft.component.css']
 })
-export class DraftComponent implements OnInit{
-
-  width: boolean = false;
-
-  constructor(private api: ApiServiceService) { }
-
-  ngOnInit(): void {
-    this.api.sidebar.subscribe(value => {
-      this.width = value;
-    });
-  }
-
+export class DraftComponent {
+  message: string = "draft";
 }
 

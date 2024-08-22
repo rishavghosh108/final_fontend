@@ -24,6 +24,7 @@ import { DraftComponent } from './draft/draft.component';
 import { SpamComponent } from './spam/spam.component';
 import { TrashComponent } from './trash/trash.component';
 import { ComposeComponent } from './compose/compose.component';
+import { EmptyBoxComponent } from './empty-box/empty-box.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ComposeComponent } from './compose/compose.component';
     DraftComponent,
     SpamComponent,
     TrashComponent,
-    ComposeComponent
+    ComposeComponent,
+    EmptyBoxComponent
   ],
   imports: [
     BrowserModule,

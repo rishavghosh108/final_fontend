@@ -1,0 +1,98 @@
+.body {
+    width: 85vw;
+    height: 90vh;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #4a90e2, #8e44ad); /* Original gradient colors */
+}
+
+.width {
+    width: 96vw;
+}
+
+.main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.2);
+    background-color: #f0f4f8; /* Light background to complement the gradient */
+}
+
+h1 {
+    font-size: 36px;
+    color: purple;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.empty-inbox {
+    margin-top: 20px;
+    font-size: 18px;
+    color: purple; /* Main gradient color for the text */
+    line-height: 1.6;
+}
+
+.empty-inbox .icon {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e1e8f0, #cfd8dc); /* Light gradient to match theme */
+    box-shadow: 0px 8px 15px rgba(69, 66, 66, 0.1);
+}
+
+.empty-inbox .icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.empty-inbox p {
+    margin: 0;
+    font-size: 20px;
+    color: purple; /* Main gradient color for the paragraph text */
+    font-weight: 500;
+    line-height: 1.5;
+}
+img{
+    border: 2px solid purple;
+}
+p{
+    color: purple;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .empty-inbox p {
+        font-size: 18px;
+    }
+}

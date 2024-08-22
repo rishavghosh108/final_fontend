@@ -6,16 +6,6 @@ import { ApiServiceService } from '../services/api-service.service';
   templateUrl: './trash.component.html',
   styleUrls: ['./trash.component.css']
 })
-export class TrashComponent implements OnInit{
-
-  width: boolean = false;
-
-  constructor(private api: ApiServiceService) { }
-
-  ngOnInit(): void {
-    this.api.sidebar.subscribe(value => {
-      this.width = value;
-    });
-  }
-
+export class TrashComponent{
+  message: string = "trash";
 }

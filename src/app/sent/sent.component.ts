@@ -6,16 +6,6 @@ import { ApiServiceService } from '../services/api-service.service';
   templateUrl: './sent.component.html',
   styleUrls: ['./sent.component.css']
 })
-export class SentComponent implements OnInit{
-
-  width: boolean = false;
-
-  constructor(private api: ApiServiceService) { }
-
-  ngOnInit(): void {
-    this.api.sidebar.subscribe(value => {
-      this.width = value;
-    });
-  }
-
+export class SentComponent{
+  message: string = "sent"
 }

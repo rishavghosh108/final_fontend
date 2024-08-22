@@ -1,12 +1,2 @@
 <app-navbar class="nav"></app-navbar>
-<div class="body" [class.width]="!width">
-    <div class="main">
-        <div class="container">
-            <h1>Empty Box</h1>
-            <div class="empty-inbox">
-                <img src="../../assets/emptybox.png" alt="Empty Inbox Icon">
-                <p>Your spam mail is empty</p>
-            </div>
-        </div>
-    </div>
-</div>
+<app-empty-box [message]="message"></app-empty-box>
